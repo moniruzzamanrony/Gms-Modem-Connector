@@ -1,3 +1,4 @@
+package com.itvillage;
 
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
@@ -6,7 +7,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.Formatter;
 
 
 /**
@@ -27,26 +27,21 @@ public class PortFinder {
      * Wrapper around {@link CommPortIdentifier#getPortIdentifiers()} to be
      * avoid unchecked warnings.
      */
-    private Enumeration<CommPortIdentifier> getCleanPortIdentifiers()
-    {
+    private Enumeration<CommPortIdentifier> getCleanPortIdentifiers() {
         return CommPortIdentifier.getPortIdentifiers();
     }
-    public ArrayList<String> getActiveModemPorts()
-    {
+
+    public ArrayList<String> getActiveModemPorts() {
         System.out.println("\nSearching for devices...");
         ArrayList<String> portsArrayList =new ArrayList<String>();
         portList = getCleanPortIdentifiers();
-        while (portList.hasMoreElements())
-        {
+        while (portList.hasMoreElements()) {
             portId = portList.nextElement();
-            if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL)
-            {
-                for (int i = 0; i < bauds.length; i++)
-                {
+            if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL) {
+                for (int i = 0; i < bauds.length; i++) {
                     SerialPort serialPort = null;
-                   // System.out.println("\nTrying at " + bauds[i]);
-                    try
-                    {
+                    // System.out.println("\nTrying at " + bauds[i]);
+                    try {
                         InputStream inStream;
                         OutputStream outStream;
                         int c;
@@ -67,16 +62,13 @@ public class PortFinder {
                         response = "";
                         StringBuilder sb = new StringBuilder();
                         c = inStream.read();
-                        while (c != -1)
-                        {
+                        while (c != -1) {
                             sb.append((char) c);
                             c = inStream.read();
                         }
                         response = sb.toString();
-                        if (response.indexOf("OK") >= 0)
-                        {
-                            try
-                            {
+                        if (response.indexOf("OK") >= 0) {
+                            try {
                                 System.out.println("  Getting Info...");
 
                                 outStream.write('A');
@@ -98,47 +90,36 @@ public class PortFinder {
                                 outStream.write('\r');
                                 response = "";
                                 c = inStream.read();
-                                while (c != -1)
-                                {
+                                while (c != -1) {
                                     response += (char) c;
                                     c = inStream.read();
                                 }
-                              //  System.out.println("\nFound: " + response.replaceAll("\\s+OK\\s+", "").replaceAll("\n", "").replaceAll("\r", "")+"---->"+ portId.getName());
+                                //  System.out.println("\nFound: " + response.replaceAll("\\s+OK\\s+", "").replaceAll("\n", "").replaceAll("\r", "")+"---->"+ portId.getName());
                                 portsArrayList.add(portId.getName());
-                            }
-                            catch (Exception e)
-                            {
+                            } catch (Exception e) {
                                 //System.out.println(_NO_DEVICE_FOUND);
 
                             }
-                        }
-                        else
-                        {
-                          //  System.out.println(_NO_DEVICE_FOUND);
+                        } else {
+                            //  System.out.println(_NO_DEVICE_FOUND);
 
                         }
-                    }
-                    catch (Exception e)
-                    {
-                      //  System.out.print(_NO_DEVICE_FOUND);
+                    } catch (Exception e) {
+                        //  System.out.print(_NO_DEVICE_FOUND);
                         Throwable cause = e;
-                        while (cause.getCause() != null)
-                        {
+                        while (cause.getCause() != null) {
                             cause = cause.getCause();
                         }
-                      //  System.out.println(" (" + cause.getMessage() + ")");
+                        //  System.out.println(" (" + cause.getMessage() + ")");
 
-                    }
-                    finally
-                    {
-                        if (serialPort != null)
-                        {
+                    } finally {
+                        if (serialPort != null) {
                             serialPort.close();
                         }
                     }
                 }
             }
         }
-     return portsArrayList;
+        return portsArrayList;
     }
 }

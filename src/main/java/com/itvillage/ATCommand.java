@@ -1,3 +1,5 @@
+package com.itvillage;
+
 import gnu.io.*;
 
 import java.io.IOException;
@@ -25,7 +27,7 @@ public class ATCommand implements SerialPortEventListener {
     public String response = "Not Readable Data";
 
 
-public String show(String portName,String cmd)
+    public String show(String portName,String cmd)
 {
     sendATCommandLine(portName,cmd);
     return  sendATCommandLine(portName,cmd);

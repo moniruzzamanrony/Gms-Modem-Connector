@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c9d7747d-92d3-4f56-b58f-7efa05eda7d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/ussd-sender.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/ATCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Modem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/Modem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PortFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/PortFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/Sms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Modem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PortFinder.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +48,15 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.itvillage" />
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\Java GUI\Auto Recharge System\Core\gms-modem-connector\src\main\java\com\itvillage" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -56,7 +71,7 @@
   </component>
   <component name="RunManager" selected="Application.Modem">
     <configuration name="ATCommand" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ATCommand" />
+      <option name="MAIN_CLASS_NAME" value="com.itvillage.ATCommand" />
       <module name="ussd-sender" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -70,7 +85,7 @@
       </method>
     </configuration>
     <configuration name="Modem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Modem" />
+      <option name="MAIN_CLASS_NAME" value="com.itvillage.Modem" />
       <module name="ussd-sender" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,7 +110,16 @@
       <option name="presentableId" value="Default" />
       <updated>1586456707497</updated>
       <workItem from="1586456711182" duration="6491000" />
+      <workItem from="1586463593742" duration="1077000" />
     </task>
+    <task id="LOCAL-00001" summary="remove dependency">
+      <created>1586463679878</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586463679878</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,10 +130,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="remove dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove dependency" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
