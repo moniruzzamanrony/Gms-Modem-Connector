@@ -1,7 +1,8 @@
 package com.itvillage;
 
-import gnu.io.CommPortIdentifier;
-import gnu.io.SerialPort;
+
+import org.smslib.helper.CommPortIdentifier;
+import org.smslib.helper.SerialPort;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -32,21 +33,23 @@ public class PortFinder {
     }
 
     public ArrayList<String> getActiveModemPorts() {
-        System.out.println("\nSearching for devices...");
+        System.out.println("Please wait searching for devices...");
         ArrayList<String> portsArrayList =new ArrayList<String>();
         portList = getCleanPortIdentifiers();
+
         while (portList.hasMoreElements()) {
             portId = portList.nextElement();
             if (portId.getPortType() == CommPortIdentifier.PORT_SERIAL) {
+
                 for (int i = 0; i < bauds.length; i++) {
                     SerialPort serialPort = null;
-                    // System.out.println("\nTrying at " + bauds[i]);
+                    //   System.out.println("\nTrying at " + bauds[i]);
                     try {
                         InputStream inStream;
                         OutputStream outStream;
                         int c;
                         String response;
-                        serialPort = portId.open("SMSLibCommTester", 1971);
+                        serialPort = portId.open("CommPortIdentifier", 1971);
                         serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN);
                         serialPort.setSerialPortParams(bauds[i], SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
                         inStream = serialPort.getInputStream();
@@ -69,7 +72,7 @@ public class PortFinder {
                         response = sb.toString();
                         if (response.indexOf("OK") >= 0) {
                             try {
-                                System.out.println("  Getting Info...");
+                                System.out.println("Getting Info...");
 
                                 outStream.write('A');
                                 outStream.write('T');
@@ -119,6 +122,9 @@ public class PortFinder {
                     }
                 }
             }
+        }
+        if (portsArrayList.size() == 0) {
+            portsArrayList.add("No Modem Found");
         }
         return portsArrayList;
     }

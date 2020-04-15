@@ -1,12 +1,14 @@
 package com.itvillage;
 
-import gnu.io.*;
 
-import java.io.IOException;
+import org.smslib.helper.CommPortIdentifier;
+import org.smslib.helper.SerialPort;
+import org.smslib.helper.SerialPortEvent;
+import org.smslib.helper.SerialPortEventListener;
+
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Enumeration;
-import java.util.TooManyListenersException;
 
 public class ATCommand implements SerialPortEventListener {
 
@@ -27,17 +29,16 @@ public class ATCommand implements SerialPortEventListener {
     public String response = "Not Readable Data";
 
 
-    public String show(String portName,String cmd)
-{
-    sendATCommandLine(portName,cmd);
-    return  sendATCommandLine(portName,cmd);
-}
+    public String show(String portName, String cmd) {
+        //  sendATCommandLine(portName, cmd);
+        return sendATCommandLine(portName, cmd);
+    }
 
     public ATCommand() {
 
     }
 
-    public  String sendATCommandLine(String portName,String cmd) {
+    public String sendATCommandLine(String portName, String cmd) {
         try {
             if (this.detectPort(portName)) {
                 if (this.initPort()) {
@@ -69,16 +70,13 @@ public class ATCommand implements SerialPortEventListener {
 
                     if (portID.getName().equals(defaultPort)) {
                         this.portId = portID;
-                        System.out.println("Found port: " + portId.getName());
                         portFound = true;
                         break;
                     }
                 }
 
             }
-            if (!portFound) {
-                System.out.println("port " + defaultPort + " not found.");
-            }
+
         } catch (Exception e) {
             portFound = false;
         }
@@ -89,35 +87,19 @@ public class ATCommand implements SerialPortEventListener {
 
     public boolean initPort() {
 
-        try {
-            serialPort = (SerialPort) portId.open("SerialCommApp", 2000);
-        } catch (PortInUseException e) {
-            System.out.println("Port in use-->" + e);
-        }
+        serialPort = (SerialPort) portId.open("SerialCommApp", 2000);
 
-        try {
-            inputStream = serialPort.getInputStream();
-            out = serialPort.getOutputStream();
-        } catch (IOException e) {
-            System.out.println("IO Error-->" + e);
-        }
+        inputStream = serialPort.getInputStream();
+        out = serialPort.getOutputStream();
 
-        try {
-            serialPort.addEventListener(this);
-        } catch (TooManyListenersException e) {
-            System.out.println("Too many LIstener-->" + e);
-        }
+        serialPort.addEventListener(this);
 
         serialPort.notifyOnDataAvailable(true);
 
-        try {
-            serialPort.setSerialPortParams(srate, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
-            serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN | SerialPort.FLOWCONTROL_RTSCTS_OUT);
-        } catch (UnsupportedCommOperationException e) {
-            System.out.println("Error while setting parameters-->" + e);
-        }
+        serialPort.setSerialPortParams(srate, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
+        serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN | SerialPort.FLOWCONTROL_RTSCTS_OUT);
 
-        System.out.println("Port Initialized....");
+        System.out.println("Port Initialized successful");
         return true;
 
     }
@@ -125,7 +107,7 @@ public class ATCommand implements SerialPortEventListener {
     public synchronized void serialEvent(SerialPortEvent event) {
 
         switch (event.getEventType()) {
-            case SerialPortEvent.DATA_AVAILABLE:
+            case 1:
                 //   System.out.println("DATA_AVAILABLE");
 
                 byte[] readBuffer = new byte[1024];
@@ -158,7 +140,6 @@ public class ATCommand implements SerialPortEventListener {
 
     public String sendAT(String cmd) {
         try {
-            System.out.println("Sending: " + cmd);
             this.response = "";
             String mysms = cmd;
             out.write(mysms.getBytes());
@@ -171,7 +152,7 @@ public class ATCommand implements SerialPortEventListener {
             }
             return response;
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Failed: " + e);
         }
         return response;
     }

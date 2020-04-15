@@ -2,16 +2,410 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9d7747d-92d3-4f56-b58f-7efa05eda7d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/Pdu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/PduFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/PduGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/PduParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/PduUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/SmsDeliveryPdu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/SmsStatusReportPdu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/SmsSubmitPdu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/ie/ConcatInformationElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/ie/InformationElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/ie/InformationElementFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/gsm3040/ie/PortInformationElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/MessageGeneratorTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/MultipartGeneratorTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/ParserGeneratorTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/ParserTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/TestFileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/AbstractTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/ClickatellSendMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/ClickatellSendPortMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/ReadMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendBinaryConcatMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendBinaryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendPortedBinaryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendPortedConcatBinaryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendPortedConcatTextMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendPortedTextMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendTextConcatMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendTextMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendWapSIConcatMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/test/integration/SendWapSIMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/testData/testMessages.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/testData/testPdus.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/wappush/WapPushUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/wappush/WapSiPdu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ajwcc/pduUtils/wappush/WapSiUserDataGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/DefaultPDUReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/DefaultPDUSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/GenericNackResponseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/InvalidCommandLengthException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/InvalidNumberOfDestinationsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/InvalidRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/InvalidResponseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/MessageCoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/PDUException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/PDUReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/PDUSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/PDUStringException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/SMPPConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/SynchronizedPDUReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/SynchronizedPDUSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/AbstractDataCodingFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/AbstractSmCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/AbstractSmRespCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/AlertNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/Alphabet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/Bind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/BindResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/BindType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/CancelSm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/CancelSmResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataCoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataCodingFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataCodingFactory00xx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataCodingFactory1100.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataCodingFactory1101.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataCodingFactory1110.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataCodingFactory1111.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataCodings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataSm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DataSmResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DefaultDeliveryReceiptStripper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DeliverSm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DeliverSmResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DeliveryReceipt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DeliveryReceiptInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DeliveryReceiptStrip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DestinationAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/DistributionList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/ESMClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/EnquireLink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/EnquireLinkResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/GSMSpecificFeature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/GeneralDataCoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/GenericNack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/IndicationSense.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/IndicationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/InterfaceVersion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/IntermediateNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/LongSMS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/MessageClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/MessageMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/MessageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/MessageState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/MessageWaitingDataCoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/NumberingPlanIndicator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/OptionalParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/OptionalParameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/Outbind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/PriorityFlag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/QuerySm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/QuerySmResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/RawDataCoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/RegisteredDelivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/ReplaceIfPresentFlag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/ReplaceSm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/ReplaceSmResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SMEOriginatedAcknowledgement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SMSCDeliveryReceipt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SarMsgRefNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SarSegmentSeqnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SarTotalSegments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SimpleDataCoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SubmitMulti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SubmitMultiResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SubmitMultiResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SubmitSm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SubmitSmResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/SubmitSmValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/TypeOfNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/Unbind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/UnbindResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/bean/UnsuccessDelivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/extra/NegativeResponseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/extra/PendingResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/extra/ProcessRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/extra/QueueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/extra/QueueMaxException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/extra/ResponseTimeoutException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/extra/SessionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/AbstractSMPPOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/AbstractSendCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/AbstractSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/AbstractSessionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ActivityNotifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/BaseResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/BindCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/BindParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/BindRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/BindRequestReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/BindResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/CancelSmCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ClientSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/DataSmCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/DataSmResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/DefaultSMPPClientOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/DefaultSMPPServerOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/DeliverSmCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/EnquireLinkCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/GenericMessageReceiverListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/GenericServerResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/MessageReceiverListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutbindCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutbindParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutbindRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutbindRequestReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutboundClientSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutboundResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutboundSMPPServerSessionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutboundSMPPServerSessionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutboundServerMessageReceiverListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutboundServerResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutboundServerSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/OutboundSessionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/PDUProcessOutboundServerTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/PDUProcessOutboundTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/PDUProcessServerTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/PDUProcessTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/QuerySmCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/QuerySmResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ReplaceSmCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPClientOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPOutboundServerSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPOutboundSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPOutboundSessionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPServerOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPServerSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPServerSessionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPServerSessionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SMPPSessionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SendCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ServerMessageReceiverListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ServerResponseDeliveryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ServerResponseDeliveryListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ServerResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/ServerSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SessionContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SessionStateListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SubmitMultiCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/SubmitSmCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/UnbindCommandTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/ConnectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/ServerConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/ServerConnectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/socket/SSLSocketConnectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/socket/ServerSocketConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/socket/ServerSocketConnectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/socket/SocketConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/connection/socket/SocketConnectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/AbstractGenericSMPPSessionBound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/GenericSMPPSessionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionBound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionBoundRX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionBoundTRX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionBoundTX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionClosed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionOpen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionOutbound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundServerSessionUnbound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundSessionBound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundSessionBoundRX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundSessionBoundTRX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundSessionBoundTX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundSessionClosed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundSessionOpen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundSessionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPOutboundSessionUnbound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPServerSessionBound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPServerSessionBoundRX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPServerSessionBoundTX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPServerSessionClosed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPServerSessionOpen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPServerSessionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPServerSessionTRX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPServerSessionUnbound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPSessionBound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPSessionBoundRX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPSessionBoundTRX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPSessionBoundTX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPSessionClosed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPSessionOpen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPSessionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/session/state/SMPPSessionUnbound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/AbsoluteTimeFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/CapacityPolicy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/DefaultComposer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/DefaultDecomposer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/DeliveryReceiptState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/DumbCapacityPolicy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/HexUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/IntUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/InvalidDeliveryReceiptException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/MessageIDGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/MessageId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/ObjectUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/OctetUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/PDUByteBuffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/PDUComposer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/PDUDecomposer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/RandomDecimalMessageIDGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/RandomMessageIDGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/RandomSessionIDGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/RelativeTimeFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/Sequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/SequentialBytesReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/SessionIDGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/SimpleCapacityPolicy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/StopWatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/StrictBufferedInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/StringParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/StringType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/StringValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jsmpp/util/TimeFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/AGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/EzTextingOutboundMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/GatewayException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/Group.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/ICallNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/IGatewayStatusNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/IInboundMessageNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/IOrphanedMessageNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/IOutboundMessageNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/IQueueSendingNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/IUSSDNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/InboundBinaryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/InboundEncryptedMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/InboundMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/InvalidMessageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/OutboundBinaryMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/OutboundEncryptedMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/OutboundMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/OutboundWapSIMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/Phonebook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/SMSLibException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/Settings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/StatusReportMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/TimeoutException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/USSDDatagram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/USSDDcs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/USSDRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/USSDResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/USSDResultPresentation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/USSDSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/USSDSessionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/UnknownMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/balancing/LoadBalancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/balancing/RoundRobinLoadBalancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/balancing/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/crypto/AESKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/crypto/AKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/crypto/ASymmetricKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/crypto/KeyManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/crypto/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/helper/CommPortIdentifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/helper/ExtStringBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/helper/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/helper/ReflectionHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/helper/SerialPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/helper/SerialPortEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/helper/SerialPortEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/helper/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/http/BulkSmsHTTPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/http/ClickatellHTTPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/http/EzTextingHTTPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/http/HTTPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/http/KannelHTTPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/http/SkypeHTTPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/http/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/AModemDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/CNMIDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/IPModemDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/IPModemGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/ModemGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/SerialModemDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/SerialModemGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/AATHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Huawei.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Huawei_E160.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Huawei_E226.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_MultiTech.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Siemens_HC25.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Siemens_MC35i.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Siemens_MC35i_FD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_SonyEricsson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_SonyEricsson_GC89.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Telit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Teltonika.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Ubinetics_GDC201.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Wavecom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Wavecom_FXT009.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Wavecom_Q2438F.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Wavecom_SunTraveller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_Wavecom_WISMOQCDMA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/ATHandler_ZTE_MF622.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/athandler/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/modem/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/notify/CallNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/notify/GatewayStatusNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/notify/InboundMessageNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/notify/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/notify/NotifyQueueManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/notify/OutboundMessageNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/queues/AbstractQueueManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/queues/DefaultQueueManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/queues/DelayedOutboundMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/queues/ScheduledOutboundMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/queues/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/routing/ARouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/routing/DefaultRouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/routing/Router.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/routing/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smpp/AbstractSMPPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smpp/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smpp/BindAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smpp/jsmpp/JSMPPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/SMSServer.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/SMSServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/AGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/BulkSmsHttp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/ClickatellHttp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/EzTextingHttp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/IPModem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/KannelHttp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/SMPPGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/SerialModem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/TestGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/gateways/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/interfaces/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/interfaces/Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/interfaces/SimpleInboundFileLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/interfaces/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/smsserver/package.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/test/TestGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/threading/AServiceThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smslib/threading/package.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/ATCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/Modem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PortFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/PortFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/Sms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ATCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PortFinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itvillage/ATCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/ATCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itvillage/PortFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itvillage/PortFinder.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +441,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -110,7 +505,13 @@
       <option name="presentableId" value="Default" />
       <updated>1586456707497</updated>
       <workItem from="1586456711182" duration="6491000" />
-      <workItem from="1586463593742" duration="1077000" />
+      <workItem from="1586463593742" duration="2741000" />
+      <workItem from="1586967614927" duration="4576000" />
+      <workItem from="1586972673428" duration="252000" />
+      <workItem from="1586976127643" duration="150000" />
+      <workItem from="1586976288707" duration="731000" />
+      <workItem from="1586977028247" duration="66000" />
+      <workItem from="1586977122201" duration="5354000" />
     </task>
     <task id="LOCAL-00001" summary="remove dependency">
       <created>1586463679878</created>
@@ -119,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586463679878</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Package">
+      <created>1586464905924</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586464905924</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +548,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="remove dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove dependency" />
+    <MESSAGE value="Add Package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Package" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
